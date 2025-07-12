@@ -202,6 +202,7 @@ if not st.query_params or password == st.secrets['DEVMODE']:
     elif current_card_type == initial_cards[2]:
         # st.write("333")
         #defaults = None
+        every_cur = [f'{i} , {st.secrets.cur[i]["forms"][4]}' for i in RATES.keys()]
         disabled = False
     elif current_card_type == initial_cards[3]:
         # st.write("444")
