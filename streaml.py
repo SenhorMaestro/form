@@ -290,7 +290,7 @@ if not st.query_params or password == st.secrets['DEVMODE']:
 
                     st.success("""Анкета успешно заполнена.  
                             Сфотографируйте или заскриньте QR-код и отправьте нам.""")
-                    st.image(qr_bytes, width=500)
+                    st.image(qr_bytes, width=st.secrets['qr_size'])
 
                     #st.write(url)
                 else:
