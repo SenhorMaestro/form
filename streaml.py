@@ -2,6 +2,9 @@ import streamlit as st
 #import pyqrcode
 import qrcode
 from io import BytesIO
+import base64
+from PIL import Image
+import numpy as np
 #from annotated_text import annotated_text
 
 
@@ -10,7 +13,7 @@ RATES2 = st.secrets['rates2']
 
 logo_image_name = "pic_logo.png"
 giant_str_logo = st.secrets["pics"][logo_image_name.split(".")[0]]
-im_logo = Image.open(io.BytesIO(base64.decodebytes(bytes(giant_str_logo, "utf-8"))))
+im_logo = Image.open(BytesIO(base64.decodebytes(bytes(giant_str_logo, "utf-8"))))
 st.logo(np.array(im_logo), size='large')
 
 password = ''
