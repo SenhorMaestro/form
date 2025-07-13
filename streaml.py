@@ -8,6 +8,11 @@ from io import BytesIO
 RATES = st.secrets['rates']
 RATES2 = st.secrets['rates2']
 
+logo_image_name = "pic_logo.png"
+giant_str_logo = st.secrets["pics"][logo_image_name.split(".")[0]]
+im_logo = Image.open(io.BytesIO(base64.decodebytes(bytes(giant_str_logo, "utf-8"))))
+st.logo(np.array(im_logo), size='large')
+
 password = ''
 initial_cards = st.secrets['anketa']['card_types']
 
