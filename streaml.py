@@ -7,6 +7,12 @@ from PIL import Image
 import numpy as np
 #from annotated_text import annotated_text
 
+st.markdown("""
+<style>
+    * {
+       overflow-anchor: none !important;
+       }
+</style>""", unsafe_allow_html=True)
 
 RATES = st.secrets['rates']
 RATES2 = st.secrets['rates2']
